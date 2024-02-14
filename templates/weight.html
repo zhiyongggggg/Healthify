@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block head %}<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+{% endblock %}
+
+{% block title %}
+    Weight Tracking
+{% endblock %}
+
+{% block main %}
+    <section class="weight-tracking">
+        <div>
+            <h3>Update your weight here:</h3>
+            <form action="/weight" method="POST">
+                <input type="number" placeholder="Weight" name="weight" autofocused autocomplete="off" step=".01" class="submitweightnumber">
+                <input type="submit" value="Submit" class="submitweightbutton">
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Date</td>
+                        <td>Weight</td>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for weight in latestweights %}
+                    <tr>
+                        <td>{{ weight["time"] }} </td>
+                        <td>{{ weight["weight"] }}</td>
+                    <tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <p>For more data, click <a href="/moredata" class=clickhere>here</a>.
+        </div>
+        <div>
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                <script>
+                    let lwl = {{ lwl }};
+                    let uwl = {{ uwl }};
+                    new Chart("myChart", {
+                    type: "line",
+                    data: {
+                        labels: {{ xValues | safe }},
+                        datasets: [{
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "rgba(0,0,255,1.0)",
+                        borderColor: "rgba(0,0,255,0.1)",
+                        data: {{ yValues | safe }}
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        scales: {
+                        yAxes: [{ticks: {min: lwl, max: uwl}}],
+                        }
+                    }
+                    });
+                </script>
+        </div>
+    </section>
+{% endblock %}
+

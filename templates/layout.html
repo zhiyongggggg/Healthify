@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Healthify: {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="../static/mainstyle.css">
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="username">Username: {{ username }}</div>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/weight">Weight Tracking</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                </ul>
+            </nav>
+            <a class="logout" href="/logout"><button>Logout</button></a>
+        </header>
+        {% block main %}{% endblock %}
+    </body>
+</html>
+

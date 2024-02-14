@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #7395AE;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    height: 7%;
+    width: 18%;
+    cursor: pointer;
+}
+
+.logolink {
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FEFFFF;
+    text-decoration: none;
+}
+
+.username {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FEFFFF;
+    text-decoration: none;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #557A95;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 1%;
+    background-color: #557A95;
+}
+
+.nav__links {
+    list-style: none;
+    background-color: #557A95;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 15px;
+    border: none;
+    background-color: #557A95;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    background-color: #557A95;
+}
+
+.nav__links li a:hover {
+    color: #0088a9
+}
+
+button {
+    padding: 7px 20px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+.logout {
+    background-color: #557A95;
+}
+
+.weight-tracking {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    height: 80vh;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+
+thead {
+    font-weight: bold;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+.submitweightnumber {
+    width: 60%;
+    padding: 12px 15px;
+    margin: 10px 2px;
+    box-sizing: border-box;
+    border: 2px solid #557A95;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+}
+
+.submitweightbutton {
+    width: 45%;
+    padding: 8px 8px;
+    margin: 10px 2px;
+    box-sizing: border-box;
+    border: 2px solid #557A95;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+    background-color: #557A95;
+}
+
+input[type=text]{
+    width: 40%;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 2px solid #557A95;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+}
+
+input[type=number]{
+    width: 40%;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 2px solid #557A95;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+}
+
+input[type=date]{
+    width: 40%;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 2px solid #557A95;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+}
+
+input[type=password]{
+    width: 40%;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 2px solid #557A95;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+}
+
+input[type=text]:focus {
+    background-color: #557A95;
+}
+
+input[type=password]:focus {
+    background-color: #557A95;
+}
+
+input[type=submit]{
+    width: 30%;
+    padding: 8px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 2px solid #557A95;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+    background-color: #557A95;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 10px 10px;
+    margin: 15px 15px;
+}
+
+.changepassword {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.settingspage {
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.graphsettings {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.more_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 15px 15px;
+    text-align: center;
+}
+
+.clickhere {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: blue;
+    text-decoration: underline;
+}
+
+.index_text {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.space_text {
+    padding: 10px 20px;
+    margin: 5px 10px;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.chart_diagram {
+    width: 50%;
+    height: 50%;
+}

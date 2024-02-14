@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block head %}<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+{% endblock %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <section class="index_text">
+        <div class="space_text"><h1>Take Control of Your Life Today</h1></div>
+        <div class="space_text"><h3>Here's a quick glance at how far you've come this month!</h3></div>
+        <div class="space_text chart_diagram">
+            <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+                <script>
+                var barColors = ["#557A95", "#557A95", "#557A95", "#557A95"];
+
+                new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: {{ xValues | safe }},
+                    datasets: [{
+                    backgroundColor: barColors,
+                    data: {{ yValues | safe }}
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                    display: true,
+                    text: "Activity Counter"
+                    }
+                }
+                });
+                </script>
+        </div>
+    </section>
+
+
+{% endblock %}
+

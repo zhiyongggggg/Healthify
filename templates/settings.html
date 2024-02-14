@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+<section class="settings">
+    <div class="settingspage">
+        <h2>Change Password</h2>
+        <form action="/changepassword" method="post" class="changepassword">
+            <input type="password" placeholder="Current Password" name="oldpassword">
+            <input type="password" placeholder="New Password" name="password">
+            <input type="password" placeholder="Reconfirm New Password" name="rpassword">
+            <input type="submit" value="Change Password">
+        </form>
+    </div>
+    <div class="settingspage">
+        <h2>Graph Settings<h2>
+        <form action="/modifygraph" method="post" class="graphsettings">
+                <input type="number" placeholder="Lower Weight Limit(y-axis)" min=0 max=1000 name="lower_weight_limit">
+                <input type="number" placeholder="Upper Weight Limit(y-axis)" min=lower_weight_limit max=1000 name="upper_weight_limit">
+                <input type="date" min="2022-01-01" max="2099-01-01" name="fromdate">
+                <input type="date" min=fromdate max="2099-01-01" name="todate">
+                <input type="submit" value="Update Graph">
+        </form>
+    </div>
+</section>
+{% endblock %}

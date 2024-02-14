@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block head %}<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+{% endblock %}
+
+{% block title %}
+    Data
+{% endblock %}
+
+{% block main %}
+    <section class="more_data">
+        <div class="settingspage">
+            <h2>Table Settings<h2>
+            <form action="/modifytable" method="post">
+                    <input type="date" min="2022-01-01" max="2099-01-01" name="tablefromdate">
+                    <input type="date" min=fromdate max="2099-01-01" name="tabletodate">
+                    <input type="submit" value="Update Table">
+            </form>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Date</td>
+                        <td>Weight</td>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for data in datas %}
+                    <tr>
+                        <td>{{ data["time"] }} </td>
+                        <td>{{ data["weight"] }}</td>
+                    <tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}
+
